@@ -21,5 +21,12 @@ sed -i \
 	-e 's|/usr/lib|${APPDIR}/lib|g' \
 	./AppDir/bin/org.nickvision.tagger
 
+## Copy help files for Help section to work
+langs=$(find /usr/share/help/*/tagger/ -type f | awk -F'/' '{print $5}' | sort | uniq)
+for lang in $langs; do
+  mkdir -p ./AppDir/share/help/$lang/tagger/
+  cp -vr /usr/share/help/$lang/tagger/* ./AppDir/share/help/$lang/tagger/
+done
+
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
