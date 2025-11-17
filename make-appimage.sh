@@ -16,10 +16,6 @@ export STARTUPWMCLASS=tagger  # For Wayland, this is 'org.nickvision.tagger', so
 
 # Trace and deploy all files and directories needed for the application (including binaries, libraries and others)
 quick-sharun /usr/bin/org.nickvision.tagger /usr/lib/org.nickvision.tagger
-sed -i \
-	-e 's|#!/usr/bin/env sh|#!/bin/sh|g'  \
-	-e 's|/usr/lib|${APPDIR}/lib|g' \
-	./AppDir/bin/org.nickvision.tagger
 
 ## Copy help files for Help section to work
 langs=$(find /usr/share/help/*/tagger/ -type f | awk -F'/' '{print $5}' | sort | uniq)
