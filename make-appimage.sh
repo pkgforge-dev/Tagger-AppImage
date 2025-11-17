@@ -15,11 +15,11 @@ export DEPLOY_DOTNET=1
 export STARTUPWMCLASS=tagger  # For Wayland, this is 'org.nickvision.tagger', so this needs to be changed in desktop file manually by the user in that case until some potential automatic fix exists for this
 
 # Trace and deploy all files and directories needed for the application (including binaries, libraries and others)
-quick-sharun /usr/bin/tagger /usr/lib/org.nickvision.tagger
+quick-sharun /usr/bin/org.nickvision.tagger /usr/lib/org.nickvision.tagger
 sed -i \
 	-e 's|#!/usr/bin/env sh|#!/bin/sh|g'  \
 	-e 's|/usr/lib|${APPDIR}/lib|g' \
-	./AppDir/bin/tagger
+	./AppDir/bin/org.nickvision.tagger
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
