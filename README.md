@@ -1,19 +1,29 @@
-# TEMPLATE-AppImage 🐧
+# Tagger-AppImage 🐧
 
-[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/TEMPLATE-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/TEMPLATE-AppImage/releases/latest)
-[![CI Build Status](https://github.com//pkgforge-dev/TEMPLATE-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/TEMPLATE-AppImage/releases/latest)
+[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/Tagger-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/Tagger-AppImage/releases/latest)
+[![CI Build Status](https://github.com//pkgforge-dev/Tagger-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/Tagger-AppImage/releases/latest)
 
-* [Latest Stable Release](https://github.com/pkgforge-dev/TEMPLATE-AppImage/releases/latest)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/NickvisionApps/Tagger/6d3ab792fa8598eb1e926904ff4a58a137e07c95/NickvisionTagger.Shared/Resources/org.nickvision.tagger.svg" width="128" />
+</p>
+
+* [Latest Stable Release](https://github.com/pkgforge-dev/Tagger-AppImage/releases/latest)
 
 ---
 
-AppImage made using [sharun](https://github.com/VHSgunzo/sharun), which makes it extremely easy to turn any binary into a portable package without using containers or similar tricks.
+AppImage made using [sharun](https://github.com/VHSgunzo/sharun), which makes it extremely easy to turn any binary into a portable package without using containers or similar tricks. 
 
 **This AppImage bundles everything and should work on any linux distro, even on musl based ones.**
 
-This AppImage can work **without FUSE** at all thanks to the [uruntime](https://github.com/VHSgunzo/uruntime)
+It is possible that this appimage may fail to work with appimagelauncher, I recommend these alternatives instead: 
 
-More at: [AnyLinux-AppImages](https://pkgforge-dev.github.io/Anylinux-AppImages/)
+* [AM](https://github.com/ivan-hc/AM) `am -i tagger` or `appman -i tagger`
+
+* [dbin](https://github.com/xplshn/dbin) `dbin install tagger.appimage`
+
+* [soar](https://github.com/pkgforge/soar) `soar install tagger`
+
+This appimage works without fuse2 as it can use fuse3 instead, it can also work without fuse at all thanks to the [uruntime](https://github.com/VHSgunzo/uruntime)
 
 <details>
   <summary><b><i>raison d'être</i></b></summary>
@@ -21,6 +31,11 @@ More at: [AnyLinux-AppImages](https://pkgforge-dev.github.io/Anylinux-AppImages/
   </a>
 </details>
 
+More at: [AnyLinux-AppImages](https://pkgforge-dev.github.io/Anylinux-AppImages/)
+
 ---
 
-# Fork this repository to quickly make an AppImage using the [Anylinux-AppImages](https://github.com/pkgforge-dev/Anylinux-AppImages) tools
+## Known quirks
+
+- Help page only works if `gnome-help` or other similar `.page` viewer is installed on the host's system.  
+Bundling the help page viewer in the AppImage would make it work everywhere, but it's both bad for the file size and [security](https://blogs.gnome.org/mcatanzaro/2025/04/15/dangerous-arbitrary-file-read-vulnerability-in-yelp-cve-2025-3155/), hence why we don't do that.
