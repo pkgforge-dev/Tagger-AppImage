@@ -12,7 +12,8 @@ export ICON=/usr/share/icons/hicolor/scalable/apps/org.nickvision.tagger.svg
 export DESKTOP=/usr/share/applications/org.nickvision.tagger.desktop
 export DEPLOY_OPENGL=1
 export DEPLOY_DOTNET=1
-export STARTUPWMCLASS=tagger  # For Wayland, this is 'org.nickvision.tagger', so this needs to be changed in desktop file manually by the user in that case until some potential automatic fix exists for this
+export STARTUPWMCLASS=tagger
+export GTK_CLASS_FIX=1
 
 # Trace and deploy all files and directories needed for the application (including binaries, libraries and others)
 quick-sharun /usr/bin/org.nickvision.tagger \
