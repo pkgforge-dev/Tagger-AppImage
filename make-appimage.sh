@@ -12,7 +12,7 @@ export ICON=/usr/share/icons/hicolor/scalable/apps/org.nickvision.tagger.svg
 export DESKTOP=/usr/share/applications/org.nickvision.tagger.desktop
 export DEPLOY_OPENGL=1
 export DEPLOY_DOTNET=1
-export STARTUPWMCLASS=tagger
+export STARTUPWMCLASS=org.nickvision.tagger
 export GTK_CLASS_FIX=1
 
 # Trace and deploy all files and directories needed for the application (including binaries, libraries and others)
