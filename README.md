@@ -1,3 +1,5 @@
+<div align="center">
+
 # Tagger AppImage 🐧
 
 [![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/Tagger-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/Tagger-AppImage/releases/latest)
@@ -8,7 +10,11 @@
   <img src="https://raw.githubusercontent.com/NickvisionApps/Tagger/refs/heads/main/NickvisionTagger.Shared/Resources/org.nickvision.tagger.svg" width="128" />
 </p>
 
-* [Upstream URL](https://github.com/NickvisionApps/Tagger)
+| Latest Stable Release | Upstream URL |
+| :---: | :---: |
+| [Click here](https://github.com/pkgforge-dev/Tagger-AppImage/releases/latest) | [Click here](https://github.com/NickvisionApps/Tagger) |
+
+</div>
 
 ---
 
